@@ -10,7 +10,7 @@ class ContextIO
     ContextIO::API::AssociationHelpers.register_resource(self, :folder)
 
     # (see ContextIO#api)
-    attr_reader :api, :source, :name, :attributes, :delim, :nb_messages,
+    lazy_attributes :api, :source, :name, :attributes, :delim, :nb_messages,
                 :uidvalidity, :nb_unseen_messages
     private :attributes
 
