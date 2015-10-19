@@ -3,7 +3,7 @@ require 'contextio'
 describe "A MessageCollection created from a Folder" do
   let(:api) { double(:api) }
   let(:source) { double(:source, account: 'account') }
-  let(:folder) { ContextIO::Folder.new(api, source: source) }
+  let(:folder) { ContextIO::Folder.new(api, source: source, name: 'folder-name') }
   let(:message_collection) { folder.messages }
 
   it "has a handle on the right account" do
