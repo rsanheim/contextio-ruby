@@ -165,6 +165,9 @@ account.messages.where(limit: 50)
 #recent messages sent to the account by some@email.com
 account.messages.where(from: 'some@email.com')
 
+#recent messages sent to the account by multiple email accounts takes in comma separated values
+account.messages.where(from: 'some@email.com,another@email.com')
+
 #multiple parameters accepted in hash format
 account.messages.where(from: 'some@email.com', subject: 'hello')
 
