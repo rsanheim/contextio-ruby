@@ -156,25 +156,25 @@ The `where` method allows you to refine search results based on
 [available filters](http://context.io/docs/2.0/accounts/messages#get).
 
 ```ruby
-#the 25 most recent messages by default, you can specify a higher limit
+# the 25 most recent messages by default, you can specify a higher limit
 account.messages
 
-#the 50 most recent messages
+# the 50 most recent messages
 account.messages.where(limit: 50)
 
-#recent messages sent to the account by some@email.com
+# recent messages sent to the account by some@email.com
 account.messages.where(from: 'some@email.com')
 
-#recent messages sent to the account by multiple email accounts takes in comma separated values
+# recent messages sent to the account by multiple email accounts takes in comma separated values
 account.messages.where(from: 'some@email.com,another@email.com')
 
-#multiple parameters accepted in hash format
+# multiple parameters accepted in hash format
 account.messages.where(from: 'some@email.com', subject: 'hello')
 
-#regexp accepted as a string like '/regexp/'
+# regexp accepted as a string like '/regexp/'
 account.messages.where(from: 'some@email.com', subject: '/h.llo/')
 
-#regexp options are supported, the /i case insensitive is often useful
+# regexp options are supported, the /i case insensitive is often useful
 account.messages.where(from: 'some@email.com', subject: '/h.llo/i')
 ```
 
